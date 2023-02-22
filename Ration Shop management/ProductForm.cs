@@ -111,6 +111,10 @@ namespace Ration_Shop_management
                     conn.Open();
                     string query = "delete from ProductTbl where Prodid=" + ProdId.Text + "";
                     SqlCommand cmd = new SqlCommand(query,conn);
+
+
+
+
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Product deleted successfully");
                     conn.Close();

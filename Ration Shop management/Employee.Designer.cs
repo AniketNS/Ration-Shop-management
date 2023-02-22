@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.genderBox = new System.Windows.Forms.ListBox();
             this.label8 = new System.Windows.Forms.Label();
             this.maskedTextBox6 = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.genderBox = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -83,6 +83,21 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1192, 687);
             this.panel1.TabIndex = 1;
+            // 
+            // genderBox
+            // 
+            this.genderBox.FormattingEnabled = true;
+            this.genderBox.ItemHeight = 20;
+            this.genderBox.Items.AddRange(new object[] {
+            "Select Role",
+            "Male",
+            "Female",
+            "Trans"});
+            this.genderBox.Location = new System.Drawing.Point(143, 296);
+            this.genderBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.genderBox.Name = "genderBox";
+            this.genderBox.Size = new System.Drawing.Size(241, 24);
+            this.genderBox.TabIndex = 20;
             // 
             // label8
             // 
@@ -140,7 +155,7 @@
             this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button7.Location = new System.Drawing.Point(1077, 31);
+            this.button7.Location = new System.Drawing.Point(1007, 31);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(92, 36);
             this.button7.TabIndex = 14;
@@ -155,7 +170,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(422, 98);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(747, 373);
+            this.dataGridView1.Size = new System.Drawing.Size(677, 373);
             this.dataGridView1.TabIndex = 13;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
@@ -281,13 +296,13 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(474, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(294, 37);
+            this.label1.Size = new System.Drawing.Size(313, 37);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Manage Emplyees";
+            this.label1.Text = "Manage Employees";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1233, -2);
+            this.button3.Location = new System.Drawing.Point(1163, -2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 30);
             this.button3.TabIndex = 15;
@@ -320,21 +335,6 @@
             this.button1.Text = "Customer";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
-            // 
-            // genderBox
-            // 
-            this.genderBox.FormattingEnabled = true;
-            this.genderBox.ItemHeight = 20;
-            this.genderBox.Items.AddRange(new object[] {
-            "Select Role",
-            "Male",
-            "Female",
-            "Trans"});
-            this.genderBox.Location = new System.Drawing.Point(143, 296);
-            this.genderBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.genderBox.Name = "genderBox";
-            this.genderBox.Size = new System.Drawing.Size(241, 24);
-            this.genderBox.TabIndex = 20;
             // 
             // Employee
             // 
