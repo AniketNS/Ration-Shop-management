@@ -75,6 +75,10 @@ namespace Ration_Shop_management
                 MessageBox.Show("Product Added Successfully");
                 conn.Close();
                 populate();
+                ProdId.Text = "";
+                ProdName.Text = "";
+                ProdQuantity.Text = "";
+                ProdPrice.Text = "";
             }
             catch(Exception ex)
             {
@@ -93,7 +97,6 @@ namespace Ration_Shop_management
             ProdName.Text = ProdDGV.Rows[ProdDGV.CurrentRow.Index].Cells[1].Value.ToString();
             ProdQuantity.Text = ProdDGV.Rows[ProdDGV.CurrentRow.Index].Cells[2].Value.ToString();
             ProdPrice.Text = ProdDGV.Rows[ProdDGV.CurrentRow.Index].Cells[3].Value.ToString();
-
         }
 
         private void Button6_Click(object sender, EventArgs e)
@@ -111,14 +114,14 @@ namespace Ration_Shop_management
                     conn.Open();
                     string query = "delete from ProductTbl where Prodid=" + ProdId.Text + "";
                     SqlCommand cmd = new SqlCommand(query,conn);
-
-
-
-
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Product deleted successfully");
                     conn.Close();
                     populate();
+                    ProdId.Text = "";
+                    ProdName.Text = "";
+                    ProdQuantity.Text = "";
+                    ProdPrice.Text = "";
                 }
                    
             }

@@ -16,7 +16,7 @@ namespace Ration_Shop_management
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Customers());
+            Application.Run(new SellingForm());
         }
     }
 }

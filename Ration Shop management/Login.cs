@@ -71,5 +71,46 @@ namespace Ration_Shop_management
         {
 
         }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            txtUser.Text = "";
+            txtPass.Text = "";
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            if(txtUser.Text=="" || txtPass.Text == "")
+            {
+                MessageBox.Show("Enter Username and Password");
+            }
+            else
+            {
+                if (RoleBox.SelectedIndex > -1)
+                {
+                    if (RoleBox.SelectedItem.ToString() == "Admin")
+                    {
+                        if (txtUser.Text == "Admin" && txtPass.Text == "Admin@123")
+                        {
+                            ProductForm prod = new ProductForm();
+                            prod.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("If you are Admin, Enter correct password");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("You are in Emplyee page");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Select correct Role");
+                }
+            }
+        }
     }
 }

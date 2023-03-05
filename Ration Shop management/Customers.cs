@@ -58,12 +58,20 @@ namespace Ration_Shop_management
             try
             {
                conn.Open();
-               string query = "insert into CustomerTbl values(" + txtCardNo.Text + ",'" + txtName.Text + "','" + txtAge.Text + "','" + txtPhone.Text + "','" + txtAdhaar.Text + "','" + txtIncome.Text + "','"+listMembers.Text+"')";
+               string query = "insert into CustomerTbl values(" + txtCardNo.Text + ",'" + txtName.Text + "','" + txtAge.Text + "','" + txtPhone.Text + "','" + txtAdhaar.Text + "','" + txtIncome.Text + "','"+listMembers.Text+ "','" + txtCardType.Text + "')";
                SqlCommand cmd = new SqlCommand(query, conn);
                cmd.ExecuteNonQuery();
                MessageBox.Show("Customer Added Successfully");
                conn.Close();
                GetData();
+                txtCardNo.Text = "";
+                txtName.Text = "";
+                txtAge.Text = "";
+                txtPhone.Text = "";
+                txtAdhaar.Text = "";
+                txtIncome.Text = "";
+                listMembers.Text = "";
+                txtCardType.Text = "";
             }
             catch (Exception ex)
             {
@@ -104,6 +112,7 @@ namespace Ration_Shop_management
             txtAdhaar.Text = CustDGV.Rows[CustDGV.CurrentRow.Index].Cells[4].Value.ToString();
             txtIncome.Text = CustDGV.Rows[CustDGV.CurrentRow.Index].Cells[5].Value.ToString();
             listMembers.Text = CustDGV.Rows[CustDGV.CurrentRow.Index].Cells[6].Value.ToString();
+            txtCardType.Text = CustDGV.Rows[CustDGV.CurrentRow.Index].Cells[7].Value.ToString();
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
@@ -119,12 +128,20 @@ namespace Ration_Shop_management
                 else
                 {
                     conn.Open();
-                    string query = "delete from CustomerTbl where Prodid=" + txtCardNo.Text + "";
+                    string query = "delete from CustomerTbl where cardno=" + txtCardNo.Text + "";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Product deleted successfully");
                     conn.Close();
                     GetData();
+                    txtCardNo.Text = "";
+                    txtName.Text = "";
+                    txtAge.Text = "";
+                    txtPhone.Text = "";
+                    txtAdhaar.Text = "";
+                    txtIncome.Text = "";
+                    listMembers.Text = "";
+                    txtCardType.Text = "";
                 }
 
             }
@@ -145,7 +162,7 @@ namespace Ration_Shop_management
                 else
                 {
                     conn.Open();
-                    string query = "update CustomerTbl set CustName='" + txtName.Text + "',CustAge='" + txtAge.Text + "',CustPhone='" + txtPhone.Text + "',CustAdhaar='" + txtAdhaar.Text + "',CustIncome='" + txtIncome.Text + "',CustMembers='" + listMembers.Text + "' where cardno=" + txtCardNo.Text + ";";
+                    string query = "update CustomerTbl set CustName='" + txtName.Text + "',CustAge='" + txtAge.Text + "',CustPhone='" + txtPhone.Text + "',CustAdhaar='" + txtAdhaar.Text + "',CustIncome='" + txtIncome.Text + "',CustMembers='" + listMembers.Text + "',CardType='" + txtCardType.Text + "' where cardno=" + txtCardNo.Text + ";";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Customer details updated");
