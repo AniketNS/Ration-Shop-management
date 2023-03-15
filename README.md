@@ -2,7 +2,7 @@
 
 Hello Guy's
 
-It is a simple BCA student project need to be submitted under a week. Would love to have your contributions in this project. So please, feel free to collaborate and Give the ideas. 
+It is a simple BCA student project. Would love to have your contributions in this project. So please, feel free to collaborate and Give the ideas. 
 
 What we want to do in project:
 
